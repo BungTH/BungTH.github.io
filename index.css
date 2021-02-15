@@ -1,82 +1,61 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body
 {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #607d89;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(32, 35, 48);
 }
-div
+
+img
+{
+    max-width: 30vh;
+    height: 30vh;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#logo
 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: inset 0 50px 150px rgba(0,0,0,1);
-    border-bottom: 1px solid #fff;
-    animation: animate 1s ease-in-out forwards;
+    transform: translate(-50%,-50%);
 }
-@keyframes animate
+    
+#logo path
 {
-    0%
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 700px;
+    animation: line-anim 2s ease forwards;
+}
+
+#desc
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#desc path
+{
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 400px;
+    animation: line-anim 3s ease forwards;
+}
+
+@keyframes line-anim
+{
+    to
     {
-        transform: translate(-50%,-50%) scale(0);
-    }
-    100%
-    {
-        transform: translate(-50%,-50%) scale(1);
-    }
-}
-div:nth-child(1)
-{
-    width: 1500px;
-    height: 1500px;
-    animation-delay: 0s;
-}
-div:nth-child(2)
-{
-    width: 1250px;
-    height: 1250px;
-    animation-delay: 0.5s;
-}
-div:nth-child(3)
-{
-    width: 1000px;
-    height: 1000px;
-    animation-delay: 1s;
-}
-div:nth-child(4)
-{
-    width: 750px;
-    height: 750px;
-    animation-delay: 1.5s;
-}
-div:nth-child(5)
-{
-    width: 500px;
-    height: 500px;
-    animation-delay: 2s;
-}
-div:nth-child(5) img
-{
-    max-width: 250px;
-    z-index: -1;
-    transform: translateY(500px);
-    animation: animateLogo 1s ease-in-out forwards;
-    animation-delay: 3s;
-}
-@keyframes animateLogo
-{
-    0%
-    {
-        transform: translateY(500px);
-    }
-    100%
-    {
-        transform: translateY(0px);
+        stroke-dashoffset: 0;
     }
 }
