@@ -61,6 +61,10 @@ body::-webkit-scrollbar-thumb
     font-weight: 600;
     font-size: 24px;
 }
+#BG
+{
+    background-color: #2b2828;
+}
 /*-----TEXT-----*/
 #TEXT h3
 {
@@ -69,4 +73,9 @@ body::-webkit-scrollbar-thumb
 #TEXT h4
 {
     color: #757575;
+}
+#Label8
+{
+    color: #ffffff;
+    text-align: left;
 }
